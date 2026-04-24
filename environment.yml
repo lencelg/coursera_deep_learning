@@ -17,3 +17,4 @@ dependencies:
 - pytorch
 - torchvision
 - scikit-learn
+- tensorflow

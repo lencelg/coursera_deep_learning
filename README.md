@@ -5,3 +5,8 @@ create your env and activate with
 $ conda env create -f environment.yml
 $ conda activate deeplearning-coursera
 ```
+
+additional, install dlai-tools with
+```console
+$ pip install dlai-tools
+```
