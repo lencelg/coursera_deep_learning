@@ -17,4 +17,4 @@ dependencies:
 - pytorch
 - torchvision
 - scikit-learn
-- tensorflow
+- tensorflow=2.4
