@@ -18,3 +18,4 @@ dependencies:
 - torchvision
 - scikit-learn
 - tensorflow=2.4
+- keras
