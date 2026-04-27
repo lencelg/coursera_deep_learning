@@ -15,12 +15,10 @@ def identity_block_test(target):
 
     X = np.concatenate((X1, X2, X3), axis = 0).astype(np.float32)
     
-    tf.keras.backend.set_learning_phase(False)
-    
     A3 = target(X,
                 f = 2,
                 filters = [4, 4, 3],
-                initializer=lambda seed=0:constant(value=1))
+                initializer=lambda seed=0:constant(value=1), traning=False)
 
 
     A3np = A3.numpy()
@@ -44,13 +42,12 @@ def identity_block_test(target):
                                   [290.99988, 290.99988, 290.99988, 146.99994]]]), 
                        atol = 1e-5 ), "Wrong values with training=False"
 
-    tf.keras.backend.set_learning_phase(True)
     np.random.seed(1)
     tf.random.set_seed(2)
     A4 = target(X,
                 f = 3,
                 filters = [3, 3, 3],
-                initializer=lambda seed=7:constant(value=1))
+                initializer=lambda seed=7:constant(value=1), traning=True)
     A4np = A4.numpy()
     resume = A4np[:,(0,-1),:,:].mean(axis = 3)
     assert np.allclose(resume, 
