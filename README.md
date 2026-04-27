@@ -10,3 +10,5 @@ additional, install dlai-tools with
 ```console
 $ pip install dlai-tools
 ```
+
+the keras package version has problem with the assignment, affecting course4 week2 assignment1 local grading
