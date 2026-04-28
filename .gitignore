@@ -5,3 +5,4 @@ resnet50.h5
 imagenet_base_model
 images
 model_data
+data
