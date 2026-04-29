@@ -12,3 +12,5 @@ $ pip install dlai-tools
 ```
 
 the keras package version has problem with the assignment, affecting course4 week2 assignment1 local grading
+
+the rest assignment of course5 is not finished, and not in consideration
