@@ -33,11 +33,11 @@ def gram_matrix_test(target):
     A = tf.random.normal([3, 2 * 1], mean=1, stddev=4)
     GA = target(A)
 
+    print("GA = \n" + str(GA))
     assert type(GA) == EagerTensor, "Use the tensorflow function"
     assert GA.shape == (3, 3), "Wrong shape. Check the order of the matmul parameters"
     assert np.allclose(GA[0,:], [63.193256, -26.729713, -7.732155]), "Wrong values."
 
-    print("GA = \n" + str(GA))
 
     print("\033[92mAll tests passed")
     
