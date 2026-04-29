@@ -6,3 +6,5 @@ imagenet_base_model
 images
 model_data
 data
+*.h5
+keras*
