@@ -51,12 +51,12 @@ def compute_layer_style_cost_test(target):
     J_style_layer_SG = target(a_S, a_G)
 
 
+    print("J_style_layer = " + str(J_style_layer_SG))
     assert type(J_style_layer_GG) == EagerTensor, "Use the tensorflow functions"
     assert np.isclose(J_style_layer_GG, 0.0), "Wrong value. compute_layer_style_cost(A, A) must be 0"
     assert J_style_layer_SG > 0, "Wrong value. compute_layer_style_cost(A, B) must be greater than 0 if A != B"
     assert np.isclose(J_style_layer_SG, 14.01649), "Wrong value."
 
-    print("J_style_layer = " + str(J_style_layer_SG))
     print("\033[92mAll tests passed")
     
 ### ex 4 is already implemented for the learners
